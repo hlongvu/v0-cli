@@ -4,20 +4,28 @@
   "description": "CLI for creating and iterating on websites with v0.dev",
   "type": "module",
   "bin": {
-    "v0": "./src/index.js"
+    "v0": "./dist/v0.cjs"
   },
   "scripts": {
     "start": "node src/index.js",
-    "dev": "node src/index.js"
+    "dev": "node src/index.js",
+    "build": "esbuild src/index.js --bundle --platform=node --format=cjs --outfile=dist/v0.cjs --external:open && grep -v '^#!' dist/v0.cjs > dist/v0.tmp && printf '#!/usr/bin/env node\\n' | cat - dist/v0.tmp > dist/v0.cjs && rm dist/v0.tmp && chmod +x dist/v0.cjs",
+    "pack": "npm run build && npm pack"
   },
+  "files": [
+    "dist/"
+  ],
   "dependencies": {
-    "v0-sdk": "latest",
     "chalk": "^5.3.0",
-    "ora": "^8.0.1",
     "commander": "^12.1.0",
-    "open": "^10.1.0"
+    "open": "^10.1.0",
+    "ora": "^8.0.1",
+    "v0-sdk": "latest"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.4"
   }
 }
