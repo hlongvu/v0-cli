@@ -21,12 +21,11 @@ program
   .option('-p, --privacy <privacy>', 'Chat privacy: public, private, or unlisted', 'public')
   .option('-s, --system <system>', 'System prompt for the AI')
   .option('--no-open', 'Do not open the browser after creation')
-  .option('--no-chat', 'Do not start interactive chat after creation')
   .action(createCommand)
 
 program
-  .command('chat <chatId>')
-  .description('Continue chatting with an existing v0 chat')
+  .command('chat <chatId> <message>')
+  .description('Send a message to an existing v0 chat')
   .action(chatCommand)
 
 program
