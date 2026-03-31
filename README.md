@@ -5,7 +5,7 @@ CLI for creating and iterating on websites with [v0.dev](https://v0.dev). Design
 ## Install
 
 ```bash
-npm install -g v0-cli
+npm install -g @hlongvu/v0-cli
 ```
 
 Or build from source:
@@ -13,7 +13,7 @@ Or build from source:
 ```bash
 npm install
 npm run pack
-npm install -g v0-cli-1.0.0.tgz
+npm install -g @hlongvu/v0-cli-1.0.0.tgz
 ```
 
 ## Setup

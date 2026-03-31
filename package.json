@@ -1,10 +1,10 @@
 {
-  "name": "v0-cli",
+  "name": "@hlongvu/v0-cli",
   "version": "1.0.0",
   "description": "CLI for creating and iterating on websites with v0.dev",
   "type": "module",
   "bin": {
-    "v0": "./dist/v0.cjs"
+    "v0": "dist/v0.cjs"
   },
   "scripts": {
     "start": "node src/index.js",

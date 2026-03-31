@@ -15,7 +15,7 @@ Designed for machine/agent use — no interactive prompts.
 node /path/to/v0-cli/src/index.js <command> [options]
 ```
 
-Or if globally linked (`npm link`):
+Or if installed globally (`npm install -g @hlongvu/v0-cli`):
 
 ```bash
 v0 <command> [options]
